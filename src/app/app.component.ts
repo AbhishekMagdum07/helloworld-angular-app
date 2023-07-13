@@ -8,9 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'helloword-angular-app';
   imgUrl = "../assets/BridgeLabz New Logo.svg";
+  url = "https://www.bridgelabz.com";
   
   ngOnInit():void {
     this.title = "Hello from Bridgelabz."
-    this.imgUrl= "../assets/BridgeLabz New Logo.svg"
+    
+  }
+
+  onClick($event: any){
+    console.log("Save button is clicked!", $event)
+    window.open(this.url, "_blank");
   }
 }
